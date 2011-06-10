@@ -1,3 +1,16 @@
+var TH = {
+  $$: function(id) {
+    var el = document.getElementById( id );
+
+    if ( el === null ) {
+      return {};
+    }
+    else {
+      return el;
+    }
+  }
+};
+
 function changeLanguage( language_select )
 {
   langcode = language_select.value;

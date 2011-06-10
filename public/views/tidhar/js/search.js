@@ -81,6 +81,8 @@ function helper_text_for( id )
       return simple_default_text;
     case 'input-roman-name':
       return roman_default_text;
+    default:
+      return false;
   }
 }
 
@@ -124,12 +126,22 @@ $(document).ready( function() {
     }
   });
 
+  $('#search-form-simple-text').blur( function() {
+    // this needs to come before the code that sets the helper text, so that
+    // the helper text for the simple input not be copied to the entry input
+    TH.$$('search-form-entry-text').value = this.value;
+  });
+
+  $('#search-form-entry-text').blur( function() {
+    TH.$$('search-form-simple-text').value = this.value;
+  });
+  
   $('.search-form :text').each( function() {
     if (
       $(this).hasClass('has-search-helper')
-      && ( $(this).val() == helper_text_for( this.id ) || ! $(this).val() )
+      && ( this.value == helper_text_for( this.id ) || ! this.value )
     ) {
-      $(this).val( helper_text_for( this.id ) );
+      this.value =  helper_text_for( this.id );
       $(this).addClass( 'search-text-helper' );
     }
 
@@ -140,55 +152,49 @@ $(document).ready( function() {
 
         var position = $(this).position();
 
-        $('#keyboard').css('top', position.top + 50 + 'px');
-        $('#keyboard').css('left', position.left + 'px');
+        TH.$$('keyboard').style.top = position.top + 50 + 'px';
+        TH.$$('keyboard').style.left = position.left + 'px';
         $('#keyboard').show( 'fast' );
       }
 
       if ( $(this).hasClass('has-search-helper') ) {
         $(this).removeClass('search-text-helper');
 
-        if ( $(this).val() === helper_text_for( this.id ) ) {
-          $(this).val('');
+        if ( this.value === helper_text_for( this.id ) ) {
+          this.value = '';
         }
       }
-    });
-
-    $(this).blur( function() {
-      if ( $(this).hasClass('has-search-helper') && ! $(this).val() ) {
+    })
+    .blur( function() {
+      if ( $(this).hasClass('has-search-helper') && ! this.value ) {
         $(this).addClass( 'search-text-helper' );
-        $(this).val( helper_text_for( this.id ) );
+        this.value = helper_text_for( this.id );
       }
     });
   });
 
-  $('#input-roman-name').each( function() {
-    if ( $(this).val() == helper_text_for( this.id ) || ! $(this).val() ) {
-      $(this).addClass( 'search-text-helper' );
-      $(this).val( helper_text_for( this.id ) );
+  var input_roman_name = TH.$$('input-roman-name');
+  
+  if (
+    input_roman_name.value == helper_text_for( 'input-roman-name' )
+    || ! input_roman_name.value
+  ) {
+    $(input_roman_name).addClass( 'search-text-helper' );
+    input_roman_name.value = helper_text_for( 'input-roman-name' );
+  }
+
+  $(input_roman_name).focus( function() {
+    console.log(input_roman_name.value);
+    $(this).removeClass('search-text-helper');
+
+    if ( this.value === helper_text_for( this.id ) ) {
+      this.value = '';
     }
-
-    // Keyboard bindings for Hebrew inputs
-    $(this).focus( function() {
-      $(this).removeClass('search-text-helper');
-
-      if ( $(this).val() === helper_text_for( this.id ) ) {
-        $(this).val('');
-      }
-    });
-
-    $(this).blur( function() {
-      if ( ! $(this).val() ) {
-        $(this).addClass( 'search-text-helper' );
-        $(this).val( helper_text_for( this.id ) );
-      }
-    });
-  });
-
-  $(this).blur( function() {
-    if ( $(this).hasClass('has-search-helper') && ! $(this).val() ) {
+  })
+  .blur( function() {
+    if ( ! this.value ) {
       $(this).addClass( 'search-text-helper' );
-      $(this).val( helper_text_for( this.id ) );
+      this.value =  helper_text_for( this.id );
     }
   });
 
@@ -197,23 +203,23 @@ $(document).ready( function() {
     $(this).addClass('active');
   });
 
-  $('#search-form-link-simple').click( function() {
+  TH.$$('search-form-link-simple').onclick = function() {
     chooseSearchForm( 'search-form-simple', true );
-  });
+  };
 
-  $('#search-form-link-fielded').click( function() {
+  TH.$$('search-form-link-fielded').onclick = function() {
     chooseSearchForm( 'search-form-fielded', true );
-  });
+  };
 
   if ( $('.search-form').length > 0 ) {
     $('*').click( function( event ) {
-      el = $(this);
+      $this = $(this);
 
       if (
-        el.attr('id') == 'keyboard'
-        || el.hasClass('key')
-        || el.parent().hasClass('search-form')
-        || el.parent().parent().hasClass('search-form')
+        this.id == 'keyboard'
+        || /\bkey\b/.test( this.className )
+        || $this.parent().hasClass('search-form')
+        || $this.parent().parent().hasClass('search-form')
       ) {
         event.stopPropagation();
         return;
@@ -234,13 +240,5 @@ $(document).ready( function() {
     if ( show_roman_popup() ) {
       $('#search-roman-popup').show().fadeOut( 4000 );
     }
-  });
-
-  $('#search-form-simple-text').blur( function() {
-    $('#search-form-entry-text').val( this.value );
-  });
-
-  $('#search-form-entry-text').blur( function() {
-    $('#search-form-simple-text').val( this.value );
   });
 });
