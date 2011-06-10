@@ -1,0 +1,32 @@
+body{
+  font-family: Trebuchet MS, Arial, sans-serif;
+}
+
+ul#nav li a {
+  font-family: Trebuchet MS, Arial, sans-serif;
+}
+
+div.headerimg{
+  padding-top: 8px;
+}
+
+div.headerimg .line-1{
+  font-size: 26px;
+}
+
+div.headerimg .line-2{
+  font-size: 38px;
+  padding-bottom: 9px;
+}
+
+div.headerimg .line-3{
+  font-size: 22px;
+}
+
+.prev-button{
+  padding: 0 0 0 1em;
+}
+
+.next-button{
+  padding: 0 1em 0 0;
+}

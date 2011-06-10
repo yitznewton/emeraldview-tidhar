@@ -1,0 +1,8 @@
+msgid "Copyright %s"
+msgstr "Copyright &copy; %s by the Estate of David Tidhar and Touro College Libraries"
+
+msgid "Results <strong>%d</strong> - <strong>%d</strong> of <strong>%d</strong> for <strong>%s</strong>"
+msgstr "Results <strong>%d</strong> - <strong>%d</strong> of <strong>%d</strong> for <strong class=\"hebrew\">%s</strong>"
+
+msgid "No results were found for your search <strong>%s</strong>"
+msgstr "No results were found for your search <strong class=\"hebrew\">%s</strong>"

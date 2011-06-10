@@ -1,0 +1,105 @@
+ul.browse-tree li, .browse-tabs ul.browse-tree li{
+  background-image: url(../../../images/treeview-default-line-rtl.gif);
+  background-position: right 0;
+  padding: 3px 19px 3px 0;
+}
+
+ul.browse-tree li.last, .browse-tabs ul.browse-tree li.last{
+  background-position: right -1766px;
+}
+
+.browse-tabs .ui-tabs-nav li{
+  float: right;
+  margin: 0 0 -1px 0.2em;
+}
+
+#sidebar ul li{
+  background-position: right 7px;
+  padding-left: 0;
+  padding-right: 10px;
+}
+
+/*ul.browse-tree.ltr li, .browse-tabs.ltr ul.browse-tree li{
+  background-image: url(../../../images/treeview-default-line-rtl.gif);
+  background-position: right 0;
+  padding: 3px 19px 3px 0;
+}
+
+ul.browse-tree.ltr li.last, .browse-tabs.ltr ul.browse-tree li.last{
+  background-position: right -1766px;
+}
+
+.browse-tabs.ltr .ui-tabs-nav li{
+  float: right;
+  margin: 0 0 -1px 0.2em;
+}
+
+#sidebar ul.ltr li{
+  background-position: right 7px;
+  padding-left: 0;
+  padding-right: 10px;
+}
+*/
+div.headerimg{
+  float: right;
+  padding: 35px 15px 0 0;
+}
+
+ul#nav li{
+  float: right;
+}
+
+.ornament{
+  padding: 13px 8px 5px 3px;
+}
+
+#leftcontent{
+  float: right;
+  padding: 0 0 5px 10px;
+  margin: 10px 20px 10px 10px;
+  border-right: none;
+  border-left: 1px dotted #F5D39A;
+}
+
+#sidebar{
+  float: left;
+  padding: 0;
+  margin: 10px 0 10px 10px;
+}
+
+#sidebar .widget{
+  float: right;
+}
+
+#about-search-container{
+  float: right;
+}
+
+ul#search-form-chooser{
+  margin: 0.5em 0.5em 0 0;
+}
+
+#about-search-history-container{
+  float: left;
+  width: 180px;
+}
+
+ol#search-hits li{
+  margin: 0 2.6em 0.8em 0;
+}
+
+#about-browse-container{
+  float: right;
+}
+
+#language-select{
+  float: left;
+}
+
+#search-form-container{
+  float: right;
+}
+
+#search-history-container{
+  float: right;
+}

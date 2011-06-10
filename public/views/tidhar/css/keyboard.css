@@ -1,0 +1,223 @@
+#keyboard{
+  position: absolute;
+  display: none;
+  clear: both;
+  background: url(../images/keyboard.png) transparent no-repeat;
+  width: 463px;
+  height: 225px;
+}
+
+.key{
+  position: absolute;
+  width: 42px;
+  height: 42px;
+}
+
+.key:hover{
+  cursor: pointer;
+}
+
+.key:active{
+  background: url(../images/keyboard.png) transparent no-repeat;
+}
+
+.row1{
+  top: 10px;
+}
+
+.row2{
+  top: 60px;
+}
+
+.row3{
+  top: 110px;
+}
+
+.row4{
+  top: 160px;
+}
+
+.col1{
+  left: 410px;
+}
+
+.col2{
+  left: 360px;
+}
+
+.col3{
+  left: 310px;
+}
+
+.col4{
+  left: 260px;
+}
+
+.col5{
+  left: 210px;
+}
+
+.col6{
+  left: 160px;
+}
+
+.col7{
+  left: 110px;
+}
+
+.col8{
+  left: 60px;
+}
+
+.col9{
+  left: 10px;
+}
+
+.row1.col1:active{
+  background-position: -410px -236px;
+}
+
+.row1.col2:active{
+  background-position: -360px -236px;
+}
+
+.row1.col3:active{
+  background-position: -310px -236px;
+}
+
+.row1.col4:active{
+  background-position: -260px -236px;
+}
+
+.row1.col5:active{
+  background-position: -210px -236px;
+}
+
+.row1.col6:active{
+  background-position: -160px -236px;
+}
+
+.row1.col7:active{
+  background-position: -110px -236px;
+}
+
+.row1.col8:active{
+  background-position: -60px -236px;
+}
+
+.row1.col9:active{
+  background-position: -10px -236px;
+}
+
+.row2.col1:active{
+  background-position: -410px -286px;
+}
+
+.row2.col2:active{
+  background-position: -360px -286px;
+}
+
+.row2.col3:active{
+  background-position: -310px -286px;
+}
+
+.row2.col4:active{
+  background-position: -260px -286px;
+}
+
+.row2.col5:active{
+  background-position: -210px -286px;
+}
+
+.row2.col6:active{
+  background-position: -160px -286px;
+}
+
+.row2.col7:active{
+  background-position: -110px -286px;
+}
+
+.row2.col8:active{
+  background-position: -60px -286px;
+}
+
+.row2.col9:active{
+  background-position: -10px -286px;
+}
+
+.row3.col1:active{
+  background-position: -410px -336px;
+}
+
+.row3.col2:active{
+  background-position: -360px -336px;
+}
+
+.row3.col3:active{
+  background-position: -310px -336px;
+}
+
+.row3.col4:active{
+  background-position: -260px -336px;
+}
+
+.row3.col5:active{
+  background-position: -210px -336px;
+}
+
+.row3.col6:active{
+  background-position: -160px -336px;
+}
+
+.row3.col7:active{
+  background-position: -110px -336px;
+}
+
+.row3.col8:active{
+  background-position: -60px -336px;
+}
+
+.row3.col9:active{
+  background-position: -10px -336px;
+}
+
+.row4.col1:active{
+  background-position: -410px -386px;
+}
+
+.row4.col2:active{
+  background-position: -360px -386px;
+}
+
+.row4.col6:active{
+  background-position: -160px -386px;
+}
+
+.row4.col7:active{
+  background-position: -110px -386px;
+}
+
+.row4.col8:active{
+  background-position: -60px -386px;
+}
+
+.row4.col9:active{
+  background-position: -10px -386px;
+}
+
+.wide-2{
+  width: 94px;
+}
+
+.wide-4{
+  width: 194px;
+}
+
+.disable-keyboard-link{
+  position: absolute;
+  top: 207px;
+  left: 182px;
+  width: 98px;
+  height: 11px;
+  cursor: pointer;
+}

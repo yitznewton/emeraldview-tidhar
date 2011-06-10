@@ -4,7 +4,7 @@
  * then a full URL will be used, eg: http://localhost/kohana/. If it only includes
  * the path, and a site_protocol is specified, the domain will be auto-detected.
  */
-$config['site_domain'] = 'emeraldview/';
+$config['site_domain'] = 'localhost/';
 
 /**
  * Force a default protocol to be used by the site. If no site_protocol is
@@ -117,10 +117,15 @@ $config['extension_prefix'] = 'MY_';
 $config['modules'] = array
 (
   MODPATH.'emeraldview', // EmeraldView core
-	// MODPATH.'auth',      // Authentication
-	// MODPATH.'kodoc',     // Self-generating documentation
-	// MODPATH.'gmaps',     // Google Maps integration
-	// MODPATH.'archive',   // Archive utility
-	// MODPATH.'payment',   // Online payments
-	// MODPATH.'unit_test', // Unit testing
+        // MODPATH.'auth',      // Authentication
+        // MODPATH.'kodoc',     // Self-generating documentation
+        // MODPATH.'gmaps',     // Google Maps integration
+        // MODPATH.'archive',   // Archive utility
+        // MODPATH.'payment',   // Online payments
+        // MODPATH.'unit_test', // Unit testing
 );
+
+$config['site_domain'] = 'emeraldview/';
+
+
+$config['site_domain'] = 'tidhar/';
