@@ -10,14 +10,6 @@ languages:
   en: English
 
 collections:
-  demo:
-    active: true
-    theme: default
-    search_results_format: "[Title]"
-  memory:
-    active: true
-  paged:
-    active: true
   tidhar:
     active: true
     theme: tidhar
@@ -26,6 +18,10 @@ collections:
     solr_host: localhost
     solr_simple_qt: dismaxev
     discoveries:
+      Haaretz:
+        It is difficult to overstate the significance of this project.
+      David Hacohen, Tel Aviv:
+        Tidhar's Encyclopedia online is like an 'oracle' to me.
       batyama:
         I never saw a picture of my great great grandfather &ndash; and here he was.
     slug_metadata_elements:
