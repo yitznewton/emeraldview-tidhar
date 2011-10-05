@@ -1,5 +1,5 @@
 <?php
-define('IN_PRODUCTION', FALSE);
+define('IN_PRODUCTION', TRUE);
 
 $kohana_application = 'application';
 $kohana_modules     = 'modules';
