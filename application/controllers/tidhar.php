@@ -131,7 +131,7 @@ class Tidhar_Controller extends Emeraldview_Controller
           $message = 'Institution: ' . $institution . chr(10) . $message;
         }
 
-        require_once Kohana::find_file('vendors', 'swiftmailer/swift_required', true);
+        require_once Kohana::find_file('vendors', 'swiftmailer/lib/swift_required', true);
 
         $message = Swift_Message::newInstance()
                    ->setFrom(      $email   )
