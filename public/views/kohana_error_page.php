@@ -45,6 +45,10 @@ src="<?php echo url::base() ?>views/default/js/default.js"></script>
       
       <p>
         We're sorry, our system encountered an error. Please try again later.
+        You may contact
+        <?php echo html::anchor( 'http://www.tourolib.org/tech-support',
+          'Touro College Libraries Technical Support' ) ?>
+        for further assistance.
       </p>
     <?php else: ?>
       <h1>Server error</h1>
